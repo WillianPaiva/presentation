@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Willian Ver Valem Paiva)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./css/reveal.css"/>
+
+<link rel="stylesheet" href="./css/theme/beige.css" id="theme"/>
+
+<link rel="stylesheet" href="./presentation.css"/>
+<link rel="stylesheet" href="./lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./pics/Untitled.png" data-background-size="1920px."><h2 class="author">Willian Ver Valem Paiva</h2><p class="date">Created: 2017-05-27 Sat 14:31</p>
+</section>
+
+
+<section>
+<section id="slide-org8862460" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org8862460">Objective of this presentation</h2>
+<ul>
+<li class="fragment appear"><b>Technical choices made (open for change)</b></li>
+<li class="fragment appear"><b>the data</b></li>
+<li class="fragment appear"><b>tests made</b></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org332590d" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org332590d">Technical choices</h2>
+<ul>
+<li class="fragment appear"><b>MongoDB</b></li>
+<li class="fragment appear"><b>Tensorflow</b></li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge33baf1" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="orge33baf1">the data</h2>
+<ul>
+<li class="fragment appear"><b>25 persons</b></li>
+<li class="fragment appear"><b>48398 frames labeled with PSPI</b></li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org838eac4" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org838eac4">the data</h2>
+
+<div class="figure">
+<p><img src="./pics/sample.png" alt="sample.png" height="600px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org390021c" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org390021c">the data</h2>
+
+<div class="figure">
+<p><img src="./pics/data.png" alt="data.png" height="600px" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3640239" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org3640239">Watson</h2>
+<p>
+<b>a hit on the wall as Watson don't accept more than 100 files to train a class</b>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org989f7fe" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org989f7fe">Tensorflow CNN</h2>
+
+<div class="figure">
+<p><img src="./pics/simple_conv.png" alt="simple_conv.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge0bb542" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h3 id="orge0bb542">batchnorm</h3>
+
+<div class="figure">
+<p><img src="./pics/conv_layer.png" alt="conv_layer.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org9158212" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h3 id="org9158212">over-fitting</h3>
+
+<div class="figure">
+<p><img src="./pics/result.png" alt="result.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgec6bdca" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="orgec6bdca">inception</h2>
+
+<div class="figure">
+<p><img src="./pics/inception.png" alt="inception.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfbb09b0" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h3 id="orgfbb09b0">inception test</h3>
+
+<div class="figure">
+<p><img src="./pics/sample_google.png" alt="sample_google.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org3cfbd8f" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h3 id="org3cfbd8f">retrain inception last layer</h3>
+
+<div class="figure">
+<p><img src="./pics/inception_res.png" alt="inception_res.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgbe1caa7" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h3 id="orgbe1caa7">but &#x2026;</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>class</b></th>
+<th scope="col" class="org-left"><b>no pain</b></th>
+<th scope="col" class="org-left"><b>average pain</b></th>
+<th scope="col" class="org-left"><b>high pain</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>no pain</b></td>
+<td class="org-left"><b>38.42%</b></td>
+<td class="org-left"><b>61.57%</b></td>
+<td class="org-left"><b>0%</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><b>average pain</b></td>
+<td class="org-left"><b>25.67%</b></td>
+<td class="org-left"><b>73.98%</b></td>
+<td class="org-left"><b>0.33%</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><b>high pain</b></td>
+<td class="org-left"><b>59.64%</b></td>
+<td class="org-left"><b>40.3%</b></td>
+<td class="org-left"><b>0%</b></td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgc91ce26" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="orgc91ce26">Aalborg university (architecture)</h2>
+
+<div class="figure">
+<p><img src="./pics/lstm.png" alt="lstm.png" />
+</p>
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orge038eb0" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="orge038eb0">Aalborg university (result)</h2>
+
+<div class="figure">
+<p><img src="./pics/aalborg_res.png" alt="aalborg_res.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org5204211" data-background="./pics/Untitled.png" data-background-transition="slide">
+<h2 id="org5204211">what next?</h2>
+<p>
+<b>a mix of the inception with a LSTM?</b>
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="./lib/js/head.min.js"></script>
+<script src="./js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.20,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

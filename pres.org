@@ -1,0 +1,156 @@
+#    -*- mode: org -*-
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t
+#+OPTIONS: reveal_mathjax:t reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:0
+#+REVEAL_MARGIN: 0.2
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+# default|cube|page|concave|zoom|linear|fade|none.
+#+REVEAL_TRANS: zoom
+#+REVEAL_THEME: beige
+#+REVEAL_HLEVEL: 999
+#+REVEAL_EXTRA_CSS: ./presentation.css
+#+REVEAL_TITLE_SLIDE_BACKGROUND: ./pics/Untitled.png
+#+REVEAL_TITLE_SLIDE_BACKGROUND_SIZE: 1920px.
+#+REVEAL_PLUGINS: (notes markdown highlight classList zoom)
+
+#+AUTHOR: Willian Ver Valem Paiva
+#+EMAIL: wvervalempaiva@projet-lucine.org
+
+
+* Objective of this presentation
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  #+ATTR_REVEAL: :frag (appear)
+  - *Technical choices made (open for change)*
+  - *the data*
+  - *tests made*
+
+* Technical choices
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  #+ATTR_REVEAL: :frag (appear)
+  - *MongoDB*
+  - *Tensorflow*
+
+
+* the data
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  #+ATTR_REVEAL: :frag (appear)
+  - *25 persons*
+  - *48398 frames labeled with PSPI*
+
+
+* the data
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+   #+attr_html: :height 600px
+  [[./pics/sample.png]]
+
+* the data
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+   #+attr_html: :height 600px
+  [[./pics/data.png]]
+
+
+* Watson
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  *a hit on the wall as Watson don't accept more than 100 files to train a class*
+
+* Tensorflow CNN
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/simple_conv.png]]
+
+
+** batchnorm
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/conv_layer.png]]
+
+
+** over-fitting
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/result.png]]
+
+* inception
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/inception.png]]
+
+** inception test
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/sample_google.png]]
+
+
+** retrain inception last layer
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/inception_res.png]]
+
+
+** but ...
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+
+| *class*        | *no pain* | *average pain* | *high pain* |
+|----------------+-----------+----------------+-------------|
+| *no pain*      | *38.42%*  | *61.57%*       | *0%*        |
+| *average pain* | *25.67%*  | *73.98%*       | *0.33%*     |
+| *high pain*    | *59.64%*  | *40.3%*        | *0%*        |
+
+
+* Aalborg university (architecture)
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/lstm.png]]
+
+
+* Aalborg university (result)
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+  [[./pics/aalborg_res.png]]
+
+* what next?
+  :PROPERTIES:
+  :reveal_background: ./pics/Untitled.png
+  :reveal_background_trans: slide
+  :END:
+
+  *a mix of the inception with a LSTM?*
