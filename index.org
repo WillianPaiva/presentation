@@ -9,7 +9,7 @@
 #+REVEAL_MAX_SCALE: 2.5
 # default|cube|page|concave|zoom|linear|fade|none.
 #+REVEAL_TRANS: zoom
-#+REVEAL_THEME: beige
+#+REVEAL_THEME: white
 #+REVEAL_HLEVEL: 999
 #+REVEAL_EXTRA_CSS: ./presentation.css
 #+REVEAL_TITLE_SLIDE_BACKGROUND: ./pics/Untitled.png
